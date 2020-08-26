@@ -1,3 +1,5 @@
+# General folders to exclude
+
 node_modules
 languages
 build
@@ -7,9 +9,19 @@ settings
 acf-json
 fonts
 translation
+
+# Config/debug files and folders
+
 xdebug/*
 config/php.ini
 config/config.sh
+containers/wordpress/Dockerfile
+.idea/
+.vscode/
+!**/.gitkeep
+
+# Plugins files and folders
+
 plugins/*
 !plugins/video-markup
 !plugins/wp-recipe-maker
@@ -20,6 +32,9 @@ plugins/wp-recipe-maker/assets
 # plugins/wp-recipe-maker/assets/js/*
 # !plugins/wp-recipe-maker/assets/js/blocks
 sa-plugins/*
+
+# Wordpress files and folders
+
 wordpress/*.php
 wordpress/*.txt
 wordpress/*.html
@@ -27,13 +42,12 @@ wordpress/.htaccess
 wordpress/wp-admin
 wordpress/wp-includes
 wordpress/wp-content/*
+!wordpress/wp-content/themes
 wordpress/wp-content/themes/*
-!/wordpress/wp-content/themes
+!wordpress/wp-content/themes/thestayathomechef_v132
+wordpress/wp-content/themes/thestayathomechef_v132/assets
+wordpress/wp-content/themes/thestayathomechef_v132/yarn.lock
+wordpress/wp-content/themes/thestayathomechef_v132/package-lock.json
 # wordpress/wp-content/themes/thestayathomechef_v132/*
-!/wordpress/wp-content/themes/thestayathomechef_v132
-
-containers/wordpress/Dockerfile
-.idea/
-.vscode/
-
-!**/.gitkeep
+# !wordpress/wp-content/themes/thestayathomechef_v132/parts
+# !wordpress/wp-content/themes/thestayathomechef_v132/functions
