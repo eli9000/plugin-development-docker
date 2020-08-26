@@ -4,9 +4,33 @@ config/php.ini
 config/config.sh
 plugins/*
 !plugins/.gitkeep
+# !plugins/video-markup
+# !plugins/wp-recipe-maker
 sa-plugins/*
 wordpress/*
 !wordpress/.gitkeep
+# wordpress/*.php
+# wordpress/*.txt
+# wordpress/*.html
+# wordpress/.htaccess
+# wordpress/wp-admin
+# wordpress/wp-includes
+# wordpress/wp-content/*.php
+# wordpress/wp-content/ai1wm-backups
+# wordpress/wp-content/languages
+# wordpress/wp-content/mu-plugins
+# wordpress/wp-content/plugins
+# wordpress/wp-content/updraft
+# wordpress/wp-content/upgrade
+# wordpress/wp-content/uploads
+# wordpress/wp-content/themes/twentynineteen
+# wordpress/wp-content/themes/twentyseventeen
+# wordpress/wp-content/themes/twentytwenty
+# wordpress/wp-content/themes/stayathomechef
+# wordpress/wp-content/themes/thestayathomechef
+# wordpress/wp-content/themes/thestayathomechef_v12
+# wordpress/wp-content/themes/thestayathomechef_v13
+# wordpress/wp-content/themes/thestayathomechef_v131
 containers/wordpress/Dockerfile
 .idea/
 .vscode/
