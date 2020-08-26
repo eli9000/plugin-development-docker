@@ -1,0 +1,87 @@
+<div id="recipe-card">
+  [wprm-recipe-video]
+
+  <div class="grid-container">
+    <div id="recipe-card-header" class="grid-x grid-padding-x text-center">
+      <div class="cell small-12 medium-3">
+        <div class="h6 dots">[wprm-recipe-name tag="h6" style="bold"]</div>
+      </div>
+
+      <div class="cell small-6 medium-auto">
+        <a href="#" data-featherlight="#commentsModal">
+          <span>Rating</span>
+          <p>[wprm-recipe-rating display="stars" style="table"]</p>
+        </a>
+      </div>
+
+      <div class="cell small-6 medium-auto">
+        <span>Servings</span>
+        <p>[wprm-recipe-servings label_container="1"]</p>
+      </div>
+
+      <div class="cell small-6 medium-auto">
+        [recipe_share]
+      </div>
+
+      <div class="cell small-6 medium-auto">
+        <span>Print</span>
+
+        <div>
+          [wprm-recipe-print text="<span class="show-for-sr">Print Recipe</span
+          >" text_color="#000" icon_color="#000" button_color="transparent"
+          horizontal_padding="12px" border_color="transparent" icon="printer"]
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-x grid-padding-x recipe-description align-middle">
+      <div class="small-12 medium-3 cell text-center">
+        [wprm-recipe-image style="rounded" size="thumbnail"]
+      </div>
+
+      <div class="small-12 medium-9 cell">
+        <div class="summary">[wprm-recipe-summary]</div>
+      </div>
+    </div>
+
+    <div class="grid-x grid-padding-x cooking-times">
+      <div class="small-12 cell" style="padding-right: 0; padding-left: 0;">
+        [wprm-recipe-meta-container fields="times" style="table"]
+      </div>
+    </div>
+
+    <div class="grid-x grid-padding-x ingredients-instructions">
+      <div class="small-12 medium-4 cell">
+        <div class="ingredients">
+          <div class="h6">Ingredients</div>
+
+          [wprm-recipe-ingredients notes_style="faded"]
+        </div>
+      </div>
+
+      <div class="small-12 medium-8 cell">
+        <div class="instructions">
+          <div class="h6">Instructions</div>
+
+          [wprm-recipe-instructions text_margin="5px" image_size="medium"]
+        </div>
+
+        <div class="notes">
+          <div class="h6">Notes</div>
+
+          [wprm-recipe-notes]
+        </div>
+      </div>
+
+      <div class="small-12 cell nutrition">
+        [wprm-nutrition-label style="simple" header="Nutrition"
+        header_style="bold"]
+      </div>
+
+      <div class="small-12 cell recipe-tags">
+        [wprm-recipe-meta-container fields="tags" label_style="faded"
+        style="inline" label_separator=": "]
+      </div>
+    </div>
+  </div>
+</div>
