@@ -1,12 +1,31 @@
-(function ($) {
-  $(document).ready(function () {
-    console.log("php variables => ", alt_video_data);
-    if (document.getElementById("xdUyEwVvQpcS")) {
-      console.log("No Adblock detected... Showing primary video");
-    } else {
-      console.log("Adblock detected... Showing alternate video");
-      let el = document.getElementById(alt_video_data.unique_id);
-      el ? (el.innerHTML = alt_video_data.html) : null;
+function hasAdblock() {
+  var a = document.createElement("div");
+  a.innerHTML = "&nbsp;";
+  a.className =
+    "adsbox pub_300x250 pub_300x250m pub_728x90 text-ad textAd text_ad adglare ad-server";
+  a.style =
+    "width: 1px !important; height: 1px !important; position: absolute !important; left: -10000px !important; top: -1000px !important;";
+  var r = false;
+  try {
+    document.body.appendChild(a);
+    var e = document.getElementsByClassName("adsbox")[0];
+    if (e.offsetHeight === 0 || e.clientHeight === 0) r = true;
+    if (window.getComputedStyle !== undefined) {
+      var tmp = window.getComputedStyle(e, null);
+      if (
+        tmp &&
+        (tmp.getPropertyValue("display") == "none" ||
+          tmp.getPropertyValue("visibility") == "hidden")
+      )
+        r = true;
     }
-  });
-})(jQuery);
+    document.body.removeChild(a);
+  } catch (e) {}
+  return r;
+}
+
+if (hasAdblock()) {
+  console.log("Adblock detected... Showing alternate video");
+  let el = document.getElementById(alt_video_data.unique_id);
+  el ? (el.innerHTML = alt_video_data.html) : null;
+}

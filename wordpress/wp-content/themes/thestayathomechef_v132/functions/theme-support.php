@@ -148,12 +148,13 @@ function prefix_estimated_reading_time( $content = '', $wpm = 300 ) {
     return $time;
 }
 
+// This is where shortcodes are being striped from the main content of the post
 function wpdocs_remove_shortcode_from_index( $content ) {
     if ( is_single() ) {
-        $content = strip_shortcodes( $content );
-        $content .= "<div>Shortcodes have been stripped</div>";
-    } else {
-		    $content .= "<div>Shortcodes have NOT been stripped</div>";
+    //     $content = strip_shortcodes( $content );
+    //     $content .= "<div>Shortcodes have been stripped</div>";
+    // } else {
+		//     $content .= "<div>Shortcodes have NOT been stripped</div>";
     }
     return $content;
 }
