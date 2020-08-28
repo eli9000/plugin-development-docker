@@ -2,8 +2,8 @@
 /*
  * Plugin Name:  Video Markup
  * Plugin URI:   https://socialau.com/
- * Description:  Adds a markup object for video
- * Version:      1.0.0
+ * Description:  By determining if AdBlock is active, we can render the correct video to users.
+ * Version:      1.1.0
  * Author:       Ilektronx
  * Author URI:   http://ilektronx.com
  * License:      GPL2
